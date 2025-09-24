@@ -2,8 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)\
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)\
-[![Build
-Status](https://img.shields.io/github/actions/workflow/status/emsikes/ai-research-assistant/ci.yml?branch=main)](https://github.com/emsikes/ai-research-assistant/actions)\
+
+
 
 
 > A modular assistant for accelerating AI‑driven research workflows ---
@@ -14,13 +14,13 @@ Status](https://img.shields.io/github/actions/workflow/status/emsikes/ai-researc
 ## 🚀 Features
 
 -   **Multi‑agent architecture**: split responsibilities across search,
-    planner, writer, email, and management agents\
+    planner, writer, email, and management agents
 -   **Deep research support**: interfaces to web / academic search
-    engines, summarization, citation handling\
+    engines, summarization, citation handling
 -   **Email / outreach agent**: generate, send, and manage email
-    communication within research workflows\
+    communication within research workflows
 -   **Planner & manager**: orchestrate multi-step tasks, track progress,
-    retry logic\
+    retry logic
 -   **Extensible & modular**: easily add new agents, customize tools,
     swap out components
 
@@ -31,9 +31,9 @@ Status](https://img.shields.io/github/actions/workflow/status/emsikes/ai-researc
 ### Prerequisites
 
 -   Python 3.8 or higher\
--   (Optional) virtual environment tool (e.g. `venv` or `conda`)\
--   API credentials / keys for any external services (e.g. search APIs,
-    email provider)
+-   (Optional) virtual environment tool (e.g. `venv` or `conda`)
+-   API credentials / keys for any services: (e.g. Openai APIs for Agents SDK,
+    SnedGrid or other email provider)
 
 ### Installation
 
@@ -88,11 +88,11 @@ python writer_agent.py --outline-file outline.json
 
 ## 🧱 Architecture Overview
 
-    User Input ---> Planner Agent ---> Search Agent / Deep Research ---> Writer Agent
+  '  User Input ---> Planner Agent ---> Search Agent / Deep Research ---> Writer Agent
                                    \                       /
                                     → Email Agent (optional)
                                    /                       \
-                    Manager & Orchestrator module (task coordination, retries, logs)
+                    Manager & Orchestrator module (task coordination, retries, logs)'
 
 -   **Planner Agent**: decomposes high-level tasks into subtasks,
     schedules them\
@@ -100,7 +100,7 @@ python writer_agent.py --outline-file outline.json
     literature\
 -   **Writer Agent**: drafts outputs (reports, summaries, survey
     chapters)\
--   **Email Agent**: compose and send emails (e.g. contacting authors)\
+-   **Email Agent**: compose and send emails (e.g. contacting authors)
 -   **Research Manager**: oversee task flows, logging, error handling,
     state persistence
 
@@ -109,10 +109,10 @@ python writer_agent.py --outline-file outline.json
 ## 🛠️ Customization & Extension
 
 -   To add a new search backend, implement the interface in
-    `search_agent.py`\
+    `search_agent.py`
 -   For custom writer behavior (e.g. style, tone), override methods in
-    `writer_agent.py`\
--   Add new planning strategies or heuristics in `planner_agent.py`\
+    `writer_agent.py`
+-   Add new planning strategies or heuristics in `planner_agent.py`
 -   Swap email / notification infrastructure (e.g., send via SMTP,
     SendGrid, etc.)
 
@@ -120,31 +120,31 @@ python writer_agent.py --outline-file outline.json
 
 ## ✅ Best Practices & Guidelines
 
--   **Modular code**: keep agents decoupled\
+-   **Modular code**: keep agents decoupled
 -   **Idempotency**: design agents so repeated runs don't break
-    consistency\
+    consistency
 -   **Logging & tracing**: use structured logs to trace flow across
-    agents\
--   **Resource limits & throttling**: manage API quotas, rate limits\
+    agents
+-   **Resource limits & throttling**: manage API quotas, rate limits
 -   **Testing**: unit test core components (search, writer, planner)
 
 ------------------------------------------------------------------------
 
 ## 🧪 Example Workflow
 
-1.  Call `planner_agent` with a high‑level goal\
-2.  Planner splits the goal into sub‑tasks\
-3.  `search_agent` / `deep_research` fetch relevant literature\
-4.  Data passed to `writer_agent` to draft sections, summaries\
-5.  Optionally, `email_agent` sends out inquiries\
+1.  Call `planner_agent` with a high‑level goal
+2.  Planner splits the goal into sub‑tasks
+3.  `search_agent` / `deep_research` fetch relevant literature
+4.  Data passed to `writer_agent` to draft sections, summaries
+5.  Optionally, `email_agent` sends out inquiries
 6.  Manager monitors, retries, logs progress
 
 ------------------------------------------------------------------------
 
 ## 📚 References & Credits
 
--   Built with core dependency on \[OpenAI Python SDK\]\
--   Inspired by agent‑based frameworks in the AI tooling ecosystem\
+-   Built with core dependency on \[OpenAI Python SDK\]
+-   Inspired by agent‑based frameworks in the AI tooling ecosystem
 -   Thanks to contributors and feedback from early users
 
 ------------------------------------------------------------------------
@@ -160,10 +160,10 @@ file for details.
 
 Contributions are welcome! To get started:
 
-1.  Fork the repo\
-2.  Create a feature branch: `git checkout -b feat/your-feature`\
-3.  Commit your changes: `git commit -m "Add X"`\
-4.  Push: `git push origin feat/your-feature`\
+1.  Fork the repo
+2.  Create a feature branch: `git checkout -b feat/your-feature`
+3.  Commit your changes: `git commit -m "Add X"`
+4.  Push: `git push origin feat/your-feature`
 5.  Open a Pull Request
 
 Please include tests, documentation, and update this README if you add
